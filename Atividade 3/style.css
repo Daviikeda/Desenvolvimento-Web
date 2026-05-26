@@ -1,0 +1,333 @@
+body {
+    font-family: "Finlandica Text", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px;
+    color: black;
+    background-color: black;
+}
+
+
+.header-logo {
+    width: 100px;
+    border-radius: 20px;
+}
+
+.header-searchbar {
+    background-color: #E0E0E0;
+    width: 700px;
+    height: 50px;
+    text-align: start;
+    padding-left: 16px;
+    border-radius: 20px;
+}
+
+.header-searchbar p {
+    margin: 0;
+    line-height: 50px;
+}
+
+.header-icons {
+    display: flex;
+    gap: 24px;
+    padding: 16px;
+    background-color: #EEEEEE;
+    border-radius: 20px;
+}
+
+.header-icons a img {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    background-color: #FAFAFA;
+    min-height: 100vh;
+    padding: 60px 40px;
+    margin: 0;
+}
+
+.hero-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@keyframes animation1 {
+    from {
+        transform: translate(-200px);
+        border-radius: 24px;
+    }
+    to {
+        transform: translate(0);
+        border-radius: 8px;
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Não achei nos slides, mas decidi usar */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
+    animation-name: animation1;
+    animation-duration: 3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background-color: #E8E8E8;
+}
+
+.card-title {
+    margin: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.card-price {
+    margin: 8px 16px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+.card-description {
+    margin: 8px 16px 16px;
+    font-size: 14px;
+    color: #666;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+    padding: 60px 40px;
+    animation-name: animation1;
+    animation-duration: 3s;
+}
+
+.cta-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 12px 0;
+}
+
+.cta-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin: 0 0 32px 0;
+    max-width: 500px;
+}
+
+.cta-button {
+    padding: 12px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;  
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: #1a1a1a;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 60px 40px 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.footer-section h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-section p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #999;
+    font-size: 12px;
+}
+
+/* Responsivo - Celulares */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .header-logo {
+        width: 60px;
+        order: 1;
+    }
+
+    .header-searchbar {
+        width: 100%;
+        height: 45px;
+        order: 3;
+        padding-left: 12px;
+    }
+
+    .header-searchbar p {
+        font-size: 12px;
+        line-height: 45px;
+    }
+
+    .header-icons {
+        order: 2;
+        gap: 16px;
+        padding: 8px 12px;
+    }
+
+    .header-icons a img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero {
+        padding: 30px 16px;
+        min-height: auto;
+    }
+
+    .hero-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-img {
+        height: 200px;
+    }
+
+    .card-title {
+        font-size: 16px;
+        margin: 12px;
+    }
+
+    .card-price {
+        font-size: 18px;
+        margin: 6px 12px;
+    }
+
+    .card-description {
+        font-size: 13px;
+        margin: 6px 12px 12px;
+    }
+
+    .cta {
+        padding: 30px 16px;
+        margin-top: 30px;
+    }
+
+    .cta-title {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .cta-subtitle {
+        font-size: 13px;
+        margin-bottom: 24px;
+    }
+
+    .cta-button {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 30px 16px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .footer-section h3 {
+        font-size: 18px;
+    }
+
+    .footer-section h4 {
+        font-size: 12px;
+    }
+
+    .footer-section p,
+    .footer-section ul li a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table.rotina {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+table.rotina td {
+    border: 1px solid #c8d2dd;
+    padding: 12px 10px;
+    text-align: center;
+}
+
+table.rotina thead td {
+    background: #d8e8ff;
+    font-weight: 700;
+}
+
+table.rotina tbody tr:nth-child(odd) td {
+    background: #fafbff;
+}
+
+table.rotina tbody td:first-child {
+    font-weight: 700;
+    background: #f1f5fb;
+}

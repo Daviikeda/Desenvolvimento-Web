@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Formulário Simples</title>
+    <style>
+        *{
+            box-sizing:border-box
+        }
+        body{
+            margin:0;
+            min-height:100vh;
+            display:flex;
+            align-items:flex-start;
+            justify-content:center;
+            padding:40px 16px;
+            background-color:#f3f4f6;
+            font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            color:#111827;
+        }
+
+        form{
+            width:100%;
+            max-width:380px;
+            background:#ffffff;
+            padding:18px;
+            border-radius:10px;
+            box-shadow:0 6px 20px rgba(15,23,42,0.06);
+        }
+
+        form h2{
+            margin:0 0 8px;font-size:16px;color:#2b7cff
+        }
+        
+        .field{
+            margin-bottom:12px
+        }
+
+        label{
+            display:block;
+            font-size:13px;
+            color:#6b7280;
+            margin-bottom:6px
+        }
+
+        input, select, textarea{
+            width:100%;
+            padding:10px 12px;
+            border:1px solid #e6e9ee;
+            border-radius:8px;
+            font-size:14px;
+            background:#fff;
+            transition:box-shadow .12s ease,border-color .12s ease,transform .08s ease;
+        }
+
+        textarea{
+            resize:vertical
+        }
+
+        input:focus, select:focus, textarea:focus{
+            outline:none;
+            border-color:#2b7cff;
+            box-shadow:0 6px 18px rgba(43,124,255,0.08);
+            transform:translateY(-1px);
+        }
+
+        .actions{
+            display:flex;
+            justify-content:flex-end;
+            margin-top:8px
+        }
+
+        button{
+            background:#2b7cff;
+            color:#fff;
+            border:0;
+            margin-top: 12px;
+            padding:8px 14px;
+            border-radius:8px;
+            cursor:pointer;
+            font-weight:600;
+        }
+
+        button:hover{
+            background-color:#1e63d6;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post" enctype="multipart/form-data" autocomplete="on">
+        <label for="name">Nome</label>
+        <input id="name" name="name" type="text" placeholder="Seu nome" required autocomplete="name">
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" placeholder="seu@exemplo.com" required autocomplete="email">
+
+        <label for="senha">Senha</label>
+        <input id="senha" name="senha" type="password" placeholder="min. 6 caracteres" required autocomplete="new-password">
+
+        <label for="dt_nasc">Data de nascimento</label>
+        <input id="dt_nasc" name="dt_nasc" type="date" autocomplete="bday">
+
+        <label for="curso">Curso</label>
+        <input id="curso" name="curso" type="text" autocomplete="organization">
+
+        <label for="sexo">Sexo</label>
+        <select id="sexo" name="sexo">
+            <option value="">-- selecione --</option>
+            <option value="masc">Masculino</option>
+            <option value="fem">Feminino</option>
+        </select>
+
+        <label for="interesses">Interesses</label>
+        <input id="interesses" name="interesses" type="text" placeholder="Ex: Web, IA">
+
+        <label for="coment">Comentários</label>
+        <textarea id="coment" name="coment" rows="3"></textarea>
+
+        <label for="foto">Upload de foto</label>
+        <input id="foto" name="foto" type="file" accept="image/*">
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
